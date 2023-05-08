@@ -9,15 +9,12 @@ export class AuthController{
     }
     @Post('signin')
     signin(@Body() dto:AuthDto){
-    
-        return this.authService.Login(dto);
-        //return req.body
-
+        return this.authService.Signup(dto)
     }
-
+    
     @Post('signup')
     signup(@Body() dto:AuthDto){
-        return this.authService.Signup(dto)
+        return this.authService.Login(dto);
     }
 
 
